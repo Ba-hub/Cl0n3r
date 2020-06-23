@@ -8,7 +8,7 @@ echo -n "Enter Link to Clone : "
 read -r LINK
 
 echo "$LINK" >> "$list"
-wget -r -np -nc -e robots=off -c --reject index.html,index.html* "${LINK}" -P "$SAVEPATH"
+wget -mk "${LINK}" -P "$SAVEPATH"
 
 echo "Successfull"
     
